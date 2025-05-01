@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Pattern Memory Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="game-container">
+        <h1 class="animate__animated animate__bounceIn">🌈 Color Pattern Memory 🎮</h1>
+        <p class="instructions">Watch the colorful sequence and repeat it correctly!</p>
+        
+        <div class="game-board">
+            <div class="tile red" data-color="red">
+                <div class="emoji">🔴</div>
+            </div>
+            <div class="tile blue" data-color="blue">
+                <div class="emoji">🔵</div>
+            </div>
+            <div class="tile green" data-color="green">
+                <div class="emoji">🟢</div>
+            </div>
+            <div class="tile yellow" data-color="yellow">
+                <div class="emoji">🟡</div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="start-btn" class="animate__animated animate__pulse animate__infinite">
+                🚀 Start Game
+            </button>
+            <div class="difficulty">
+                <label>Difficulty Level:</label>
+                <select id="difficulty">
+                    <option value="3">Easy (3 steps)</option>
+                    <option value="4">Medium (4 steps)</option>
+                    <option value="5">Hard (5 steps)</option>
+                    <option value="6">Expert (6 steps)</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="score">⭐ Score: <span id="score">0</span></div>
+        <div class="message animate__animated" id="message"></div>
+        
+        <div class="character animate__animated" id="character">🐶</div>
+    </div>
+    
+    <audio id="background-music" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-game-show-suspense-waiting-668.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
